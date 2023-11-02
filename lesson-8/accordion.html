@@ -19,16 +19,16 @@
 			</header>
 			<main>
 <!-- STEP 5: Surround the entire collection of content with a DIV element to serve as the root for the accordion - use the "accordion" class and a suitable id -->
-				<div class="accordion" id="myAccordion">
+				<div class="accordion accordion-flush" id="myAccordion">
 <!-- STEP 6: Create a SECTION element for each heading and content pair, by adding the "accordion-item" class -->
 					<section class="accordion-item">
 <!-- STEP 7: Identify the heading for each accordion item with an H2 element - include the class "accordion-header", a unique id for each -->
 						<h2 class="accordion-header" id="heading1">
 <!-- STEP 8: Inside the H2, add a BUTTON element with the type set to "button", the class "accordion-button", the data-bs-toggle attribute set to "collapse", the data-bs-target pointing to the id of the element to be collapsed -->
-							<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">Heading 1</button>
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">Heading 1</button>
 						</h2>
 <!-- STEP 9a: Surround each of the paragraphs with a DIV identifying them as the collapsible element with the class "accordion-collapse" and put it in the collapsed state with the class "collapse" - add the id "collapse1" -->
-						<div class="accordion-collapse collapse show" id="collapse1" data-bs-parent="#myAccordion">
+						<div class="accordion-collapse collapse" id="collapse1" data-bs-parent="">
 <!-- STEP 9b: Tie the collapsible DIV you just created above to the parent accordion element with the data-bs-parent attribute pointing to the id of the entire accordion widget (see STEP 5)-->
 <!-- STEP 10: Create another DIV element with the class "accordion-body", which surrounds the content itself (a P element in this case) -->
 							<div class="accordion-body">
@@ -41,7 +41,7 @@
 						<h2 class="accordion-header" id="heading2">
 							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">Heading 2</button>
 						</h2>
-						<div class="accordion-collapse collapse" id="collapse2" data-bs-parent="#myAccordion">
+						<div class="accordion-collapse collapse" id="collapse2" data-bs-parent="">
 							<div class="accordion-body">
 								<p>Morbi vel ipsum id dolor rutrum lacinia. Praesent ullamcorper vulputate libero a vestibulum. Cras mollis mollis magna, ut mattis lacus convallis vel. Praesent accumsan, odio quis varius suscipit, nulla ante tincidunt nisl, non interdum quam eros nec nibh. Nulla eget dapibus metus, ac ultricies purus. Vestibulum et tristique felis. Nulla tempor, libero quis gravida suscipit, quam felis tempus metus, eu congue lectus orci a leo. Phasellus tincidunt nibh vel dolor vehicula viverra vitae ut metus. In faucibus nulla metus, eget bibendum ex condimentum a. Morbi vel lobortis lacus, vitae malesuada sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse non velit lacus. Ut finibus pretium tellus, in aliquet purus sodales ut. Phasellus in nisi felis. Suspendisse at laoreet nunc. Vestibulum cursus at ex ut pharetra.</p>
 							</div><!-- .accordion-body -->
@@ -51,7 +51,7 @@
 						<h2 class="accordion-header" id="heading3">
 							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">Heading 3</button>
 						</h2>
-						<div class="accordion-collapse collapse" id="collapse3" data-bs-parent="#myAccordion">
+						<div class="accordion-collapse collapse" id="collapse3" data-bs-parent="">
 							<div class="accordion-body">
 								<p>Mauris in orci ac neque suscipit vestibulum vitae id leo. Etiam sem massa, semper id est euismod, sodales malesuada quam. Mauris placerat libero nibh, non interdum purus porttitor in. Donec eget justo nisi. In libero erat, iaculis in libero sed, eleifend varius lectus. Curabitur euismod metus condimentum, pellentesque nunc non, luctus dolor. Nam condimentum nec nisi ac pretium. Vivamus et ex a risus lacinia facilisis. Sed non odio lacus. Etiam consequat felis massa, tristique semper neque elementum sed. Vestibulum a lectus metus.</p>
 							</div><!-- .accordion-body -->
