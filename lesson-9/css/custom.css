@@ -23,7 +23,14 @@
 /* STEP 5: Use the provided font, "Sign Painter Upright" for the author's name, and for the title of the book as they are the precise font used in the book cover design - please don't use this font outside of this class, as we have purchased a license for the educational use of this font only within the scope of this particular class (https://houseind.com/hi/signpainter) */
 
 /* STEP 5a: Create the @font-face rule for "Sign Painter Upright" */
-
+@font-face {
+    font-family: "Sign Painter Upright";
+    src: url("../fonts/SignPainter-HouseUpright.AH.woff2") format("woff2"),
+    url("../fonts/SignPainter-HouseUpright.AH.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
 
 * {
 	margin: 0;
@@ -58,10 +65,10 @@ header p:first-child, header address {
 }
 header address {
 	/* STEP 2b: Set "Kaushan Script" as the first in the font stack for the author's name */
-	font-family: 'Kaushan Script', Impact, Arial, sans-serif;
+	font-family: 'Sign Painter Upright', Impact, Arial, sans-serif;
 	/* STEP 5b: Replace "Lobster" above with "Sign Painter Upright" as the first font in the stack */
 	/* STEP 5d: Size up the font to emulate the original design - note the difference between em and rem (root em) */
-	font-size: 3em;
+	font-size: 8rem;
 	font-weight: normal;
 	font-style: normal;
 	letter-spacing: 0.1em;
@@ -97,7 +104,7 @@ header h1 {
 header h1 strong {
 	display: block;
 	/* STEP 5c: Set "Sign Painter Upright" as the first font in the stack */
-	font-family: Impact, Arial, sans-serif;
+	font-family: 'Sign Painter Upright', Impact, Arial, sans-serif;
 	font-size: 1.7em;
 	letter-spacing: 0.05em;
 	font-weight: normal;
