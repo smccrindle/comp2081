@@ -1,5 +1,5 @@
 /* Custom CSS */
-/* STEP 2a: Use Google Web Fonts API to attach the "Lobster" font - note that there are two methods: Standard and @import (https://fonts.google.com/) */
+/* STEP 2a: Use Google Web Fonts API to attach the "Lobster" font - note that there are two methods: Standard and @import (https://fonts.google.com/) */@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 /* /* STEP 3a: Use the font face kit at Font Squirrel to generate @font-face for HoneyScript Light (https://www.dafont.com/Honey-Script.font) - Read the legal disclaimer at the bottom of the home page - it is your legal responsibility to check the terms of use for fonts (open the generated stylesheet.css) */
 
@@ -22,13 +22,13 @@ html	{
 }
 body {
 	/* STEP 1: Set base font settings to 120% font-size, 1.4 line-height, Futura (font-style, font-variant, font-weight, font-size, line-height, and font-family) (https://developer.mozilla.org/en-US/docs/Web/CSS/font) */
-	;
+	font: normal normal normal normal 120%/1.4 Futura, Arial, Helvetica, sans-serif;
 	color: #111;
 	width: 480px;
 	margin: 0 auto;
 	min-height: 100%;
 	background: url('../images/sky.jpg');
-	transform: rotate(-5deg);
+	transform: rotate(0deg);
 	box-shadow: 10px 10px 50px #666;
 	position: relative;
 	min-height: 750px;
@@ -44,8 +44,8 @@ header p:first-child, header address {
 	background-color: rgb(212, 0, 31);
 }
 header address {
-	/* STEP 2b: Set "Lobster" as the first in the font stack for the author's name */
-	font-family: Impact, Arial, sans-serif;
+	/* STEP 2b: Set "Kaushan Script" as the first in the font stack for the author's name */
+	font-family: 'Kaushan Script', Impact, Arial, sans-serif;
 	/* STEP 5b: Replace "Lobster" above with "Sign Painter Upright" as the first font in the stack */
 	/* STEP 5d: Size up the font to emulate the original design - note the difference between em and rem (root em) */
 	font-size: 3em;
