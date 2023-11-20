@@ -12,7 +12,7 @@ html {
     border: 1px solid #CCC;
     margin: 40px;
     /* STEP 2: Remove the perspective() function below in STEP 1a, and instead add the perspective property on the parent element (as an option) */
-    
+    perspective: 400px;
 }
 #perspective .panel {
     width: 100%;
@@ -22,7 +22,8 @@ html {
 }
 #perspective .panel:hover {
     /* STEP 1a: Use the perspective() and the rotateY() functions */
-    
+    /* transform: perspective(400px) rotateX(45deg); */
+    transform: rotateX(45deg);
     /* STEP 1b: Try the rotateX() function, instead */
     /* STEP 1c: Modify the degrees to some other value */
 }
@@ -35,7 +36,7 @@ html {
     border: 1px solid #CCC;
     margin: 40px;
     /* STEP 3a: Add perspective to the parent element */
-    
+    perspective: 400px;
     /* STEP 4: Modify the perspective origin - it defaults to the center */
     
 }
@@ -44,7 +45,8 @@ html {
     height: 130px;
     background: blue;
     transition: all 0.2s;
-    
+    /* transform: perspective(400px) rotateY(30deg); */
+    transform: rotateX(30deg);
     /* STEP 3b: Comment out the above perspective declaration at STEP 2a and add the perspective function to the above declaration, instead - see how each element now has its own vanishing point? */
     /* STEP 3c: Restore the perspective on the parent so that all cards share a common vanishing point, restoring the illusion */
 }

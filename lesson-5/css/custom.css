@@ -1,8 +1,8 @@
 /* Custom CSS */
 /* STEP 12: Using your browser's DOM Inspector, figure out how the default .carousel-caption is positioned with CSS, and change it */
 /* .carousel-caption {
-	bottom: 0;
-	padding-bottom: 0;
+	top: 0;
+	padding-top: 0.5rem;
 } */
 
 /* STEP 13: View the result in the browser, then head back to index.html */

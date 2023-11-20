@@ -108,20 +108,21 @@ Possible values are: nowrap | wrap | wrap-reverse
 We need to set a width on the flex children to see this */
   flex-wrap: wrap;
 /* STEP 3c: We can use the shorthand flex-flow to specify both the flex-direction and the flex-wrap */
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
 /* STEP 4a: Control alignment of flex children along the main axis, with justify-content
 Possible values are: flex-start | flex-end | center | space-between | space-around | space-evenly
 We need to reduce the width of the children to see this */
-  justify-content: stretch;
-/* STEP 6c: Change the justify-content back to stretch */
+  justify-content: flex-start;
+/* STEP 6c: Change the justify-content back to flex-start */
 /* STEP 5: Align flex children on the cross axis with align-items
 Possible values are: flex-start | flex-end | center | baseline | stretch */
   align-items: flex-start;
 /* STEP 10b: Change the align-items on the parent (to flex-start) to see how align self can override this property */
 /* STEP 6a: Specify how flex children will be reflowed when there is extra space in the cross-axis
+
 We will need to resize the children so that they wrap to see this (and change justify-content to flex-start, and the height of the flex container to full height of the viewport - 100vh)
 Possible values for align-content are: flex-start | flex-end | center | space-between | space-around | stretch */
-  align-content: flex-start;
+  /* align-content: flex-start; */
 }
 
 #flex body > div > div {
@@ -141,33 +142,39 @@ Change the order in which the children appear - use order: <number>; */
 /* STEP 8: Control how each of the children are sized with flex-grow */
 #flex body > div > div:nth-of-type(1) {
   background: brown;
-  order: 2;
-  flex-grow: 2;
-  align-self: center;
+  order: 4;
+  /* flex-grow: 1;
+  flex-shrink: 1; */
 }
 
 #flex body > div > div:nth-of-type(2) {
   background: darkorange;
-  order: 4;
+  order: 3;
+  /* flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 50rem; */
 }
 #flex body > div > div:nth-of-type(3) {
   background: mediumseagreen;
   order: 1;
-  flex-grow: 1
+  /* flex-grow: 1;
+  flex-shrink: 3; */
 }
 #flex body > div > div:nth-of-type(4) {
   background: steelblue;
   order: 5;
-  flex-grow: 3;
+  /* flex-grow: 3;
+  flex-shrink: 1; */
 /* STEP 9b: Set flex-basis on this child */
-  flex-basis: 15rem;
+
 /* STEP 10a: Align a particular flex child differently than the rest with align-self (change align-items on the parent to flex-start, first) */
   align-self: flex-end;
 }
 #flex body > div > div:nth-of-type(5) {
   background: slateblue;
-  order: 3;
-
+  order: 2;
+  /* flex-grow: 1;
+  flex-shrink: 1; */
 }
 /* STEP 9a: Control the space occupied by a particular flex child, after which the remaining space will be re-distributed, with flex-basis */
 
@@ -177,10 +184,8 @@ Change the order in which the children appear - use order: <number>; */
 
  /* STEP 11: Set the column-count on the paragraph */
 #columns body > p {
-  background: #ccc;
-  border: 5px solid #aaa;
-  padding: 2em;
-  column-count: 3;
+  column-count: 4;
+  padding: 3em;
   column-gap: 3em;
   column-rule-width: 5px;
   column-rule-color: #aaa;
