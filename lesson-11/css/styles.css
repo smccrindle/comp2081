@@ -21,9 +21,9 @@ main > section {
     overflow: auto;
     
     /* STEP 4: Add a gap between grid items so we can better see how the items are being arranged inside the grid container */
-    gap: 10px;
+    gap: 1%;
     background-color: lightgrey;
-    padding: 10px;
+    padding: 1%;
     
     /* STEP 5: Set up a basic grid with 2 rows and 5 columns */
     grid-template-columns: 150px 150px 150px 150px 150px;
@@ -48,19 +48,21 @@ main > section {
     /* min() is essentially setting a max-height, and max() is effectively setting a min-height */
 
     /* STEP 10: Alternatively, we can set minimum and maximum limits within which the columns or rows can expand or contract with minmax() - this is a CSS Grid-specific property/function */
-    grid-template-columns: repeat(5, minmax(150px, 250px));
+    grid-template-columns: repeat(5, minmax(min-content, 1fr));
     grid-template-rows: repeat(2, minmax(200px, 300px));
     /* Note that we reverted back to fr units for the rows - this allows the rows to expand in height if they can, but not to shrink to less than min-content */
 
     /* STEP 11: If there is an ideal width you would like to specify, but within upper and lower limits, use clamp() */
-    
+    grid-template-columns: repeat(5, clamp(125px, 19.2%, 250px));
 
     /* STEP 12: What if you wanted the layout to feature a dynamic number of columns? The auto-fit and auto-fill parameters of the repeat() function can help - avoiding the need for extensive @media queries */
-    
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-rows: repeat(2, 225px);
 
     /* STEP 13: Combining auto-fit with minmax() will enable an even more adaptive grid layout experience */
-    
-
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, clamp(125px, 19.2%, 250px));
+    grid-template-rows: 200px;
     /* STEP 14: Try auto-fill instead - the difference is subtle but make the change, then observe the behavior using the grid display in the browser dev tools */
     
 }
