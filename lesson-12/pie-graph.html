@@ -7,16 +7,16 @@
 	</head>
 	<body>
 		<!-- STEP 1: Create SVG element -->
-		
+		<svg viewbox="0 0 400 400">
 			<!-- STEP 2: Create main circle for pie graph -->
-			
+			<circle cx="200" cy="200" r="200" fill="#CCC" />
 			<!-- STEP 3: Build the circle that will function as the pie 'wedge' -->
-			
+			<circle cx="200" cy="200" r="100" fill="transparent" stroke-width="200" stroke="#6495ED" stroke-dasharray="0 0" transform="rotate(-90, 200, 200)" />
 			<!-- STEP OPTIONAL: Build an inside circle to function a a mask, making the pie chart more of a ring than a pie -->
 			
 			<!-- STEP 4: Add the text label to the pie chart, then open up css/styles.css for the next step -->
-			
-		
+			<text x="115" y="230" fill="#333" font-size="100" textAnchor="middle">36%</text>
+		</svg>
 		
 		<!-- STEP 10: Connect the JavaScript to the HTML, then proceed to js/charts.js for the next step -->
 		
